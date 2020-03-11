@@ -359,6 +359,14 @@ class BoardGameVersion(Thing):
         return self._data.get("language")
 
     @property
+    def languages(self):
+        """
+        :return: languages of this version
+        :rtype: list of str
+        """
+        return self._data.get("languages", [])
+
+    @property
     def name(self):
         """
         :return: name of this version
@@ -386,6 +394,14 @@ class BoardGameVersion(Thing):
         :return: ``None`` if n/a
         """
         return self._data.get("publisher")
+
+    @property
+    def publishers(self):
+        """
+        :return: publishers of this version
+        :rtype: list of str
+        """
+        return self._data.get("publishers", [])
 
     @property
     def weight(self):
